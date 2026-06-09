@@ -14,8 +14,8 @@ Notification
     + send(message: String)
          ▲
          │
-    ┌────┴────────────────────┐
-    │            │            │
+    ┌────┴──────────────────────────────┐
+    │                      │            │
 EmailNotification  SMSNotification  PushNotification
 
 NotificationFactory
