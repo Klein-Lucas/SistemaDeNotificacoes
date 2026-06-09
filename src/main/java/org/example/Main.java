@@ -5,22 +5,22 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Escolha o tipo de notificação:");
+        System.out.println("Choose notification type:");
         System.out.println("1: Email");
         System.out.println("2: SMS");
         System.out.println("3: Push Notification");
-        System.out.print("Opção: ");
+        System.out.print("Option: ");
 
         String option = scanner.nextLine();
 
-        System.out.print("Digite a mensagem a ser enviada: ");
+        System.out.print("Enter the message to send: ");
         String message = scanner.nextLine();
 
         Notification notification = NotificationFactory.createNotification(option);
         if (notification != null) {
             notification.send(message);
         } else {
-            System.out.println("Opção inválida de notificação.");
+            System.out.println("Invalid notification type.");
         }
 
         scanner.close();
